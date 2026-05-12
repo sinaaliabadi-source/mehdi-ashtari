@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تماس | مهدی اشتری</title>
+  <meta name="description" content="تماس با مهدی اشتری — تحلیلگر کسب‌وکار" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="gradient-ring">
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link" aria-label="صفحه اصلی">
+        <img src="brand/logo.svg" alt="لوگو مهدی اشتری" class="logo-img" />
+      </a>
+      <nav class="desktop-nav" aria-label="ناوبری اصلی">
+        <a href="index.html">خانه</a>
+        <a href="ba-lab.html">BA Lab</a>
+        <a href="content.html">محتوا</a>
+        <a href="about.html">درباره من</a>
+        <a href="contact.html">تماس</a>
+      </nav>
+      <button class="hamburger-btn" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobile-menu">
+        <div class="hamburger-lines"><span></span><span></span><span></span></div>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav container" aria-label="ناوبری موبایل">
+        <a href="index.html">خانه</a>
+        <a href="ba-lab.html">BA Lab</a>
+        <a href="content.html">محتوا</a>
+        <a href="about.html">درباره من</a>
+        <a href="contact.html">تماس</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────── -->
+  <main>
+    <section>
+      <div class="container">
+
+        <div class="page-heading">
+          <h1>تماس</h1>
+          <p>برای مشاوره، همکاری یا پرسش، فرم زیر را پر کنید.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact info -->
+          <div class="contact-info">
+            <h2>در تماس باشیم</h2>
+            <p>
+              اگر پروژه‌ای دارید که به تحلیل کسب‌وکار یا مشاوره محصول نیاز دارد،
+              یا صرفاً می‌خواهید سوالی بپرسید، خوشحال می‌شوم بشنوم.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">✉</div>
+              <a href="mailto:hello@mehdiashtari.com" style="color:rgba(255,255,255,.8)">hello@mehdiashtari.com</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6.94 9.75V17m10-3.25c0-1.795-.78-3.25-2.75-3.25-1.284 0-2.033.592-2.406 1.25V9.75h-2.25V17h2.25v-3.25c0-.884.716-1.6 1.6-1.6.883 0 1.306.716 1.306 1.6V17h2.25v-3.25Z"/>
+                  <circle cx="6.94" cy="6.94" r="1.19" fill="currentColor"/>
+                </svg>
+              </div>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,.8)">LinkedIn</a>
+            </div>
+
+            <div style="margin-top:2rem">
+              <p class="dot-accent">معمولاً ظرف ۴۸ ساعت پاسخ می‌دهم</p>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div class="form-card">
+            <!--
+              این فرم فقط client-side است و ارسال واقعی نمی‌کند.
+              برای وصل کردن به سرویس ارسال ایمیل:
+                - Formspree: action="https://formspree.io/f/YOUR_ID" method="POST"
+                - EmailJS: در contactForm.js از emailjs.sendForm() استفاده کنید
+            -->
+            <form id="contactForm" novalidate>
+
+              <div class="form-group">
+                <label class="form-label" for="field-name">نام <span>*</span></label>
+                <input
+                  type="text"
+                  id="field-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="نام شما"
+                  autocomplete="name"
+                />
+                <p class="field-error" id="err-name">لطفاً نام خود را وارد کنید.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-contact">ایمیل یا شماره تماس <span>*</span></label>
+                <input
+                  type="text"
+                  id="field-contact"
+                  name="contact"
+                  class="form-input"
+                  placeholder="example@email.com یا ۰۹۱۲..."
+                  autocomplete="email"
+                />
+                <p class="field-error" id="err-contact">لطفاً یک ایمیل یا شماره تماس معتبر وارد کنید.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-subject">موضوع <span>*</span></label>
+                <input
+                  type="text"
+                  id="field-subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="موضوع پیام"
+                />
+                <p class="field-error" id="err-subject">لطفاً موضوع را وارد کنید.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-message">پیام <span>*</span></label>
+                <textarea
+                  id="field-message"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="پیام خود را بنویسید... (حداقل ۱۰ کاراکتر)"
+                  rows="5"
+                ></textarea>
+                <p class="field-error" id="err-message">پیام باید حداقل ۱۰ کاراکتر باشد.</p>
+              </div>
+
+              <div class="form-submit-wrap">
+                <button type="submit" id="submit-btn" class="btn-base btn-primary" disabled>
+                  ارسال پیام
+                </button>
+              </div>
+
+              <div class="success-msg" id="success-msg" role="alert">
+                ✓ پیام شما ثبت شد. به زودی با شما تماس می‌گیرم.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="brand/logo.svg" alt="لوگو" class="logo-img" />
+        <p>تحلیل تصمیم‌محور برای خروجی اجراپذیر</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hello@mehdiashtari.com" aria-label="ایمیل">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7.5c0-.83.67-1.5 1.5-1.5h13c.83 0 1.5.67 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 16.5v-9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m6 8 6 4 6-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com" aria-label="لینکدین" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.94 9.75V17m10-3.25c0-1.795-.78-3.25-2.75-3.25-1.284 0-2.033.592-2.406 1.25V9.75h-2.25V17h2.25v-3.25c0-.884.716-1.6 1.6-1.6.883 0 1.306.716 1.306 1.6V17h2.25v-3.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6.94" cy="6.94" r="1.19" fill="currentColor"/>
+          </svg>
+        </a>
+        <span class="footer-copy">© <span id="year"></span> Mehdi Ashtari</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    var form = document.getElementById('contactForm');
+    var submitBtn = document.getElementById('submit-btn');
+    var successMsg = document.getElementById('success-msg');
+
+    var fields = {
+      name:    { el: document.getElementById('field-name'),    err: document.getElementById('err-name'),    valid: false },
+      contact: { el: document.getElementById('field-contact'), err: document.getElementById('err-contact'), valid: false },
+      subject: { el: document.getElementById('field-subject'), err: document.getElementById('err-subject'), valid: false },
+      message: { el: document.getElementById('field-message'), err: document.getElementById('err-message'), valid: false },
+    };
+
+    var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var phoneRe = /^[\d\s۰-۹\+\-\(\)]{7,}$/;
+
+    function validateField(key) {
+      var f = fields[key];
+      var val = f.el.value.trim();
+      var ok = false;
+
+      if (key === 'name')    ok = val.length >= 2;
+      if (key === 'contact') ok = emailRe.test(val) || phoneRe.test(val);
+      if (key === 'subject') ok = val.length >= 2;
+      if (key === 'message') ok = val.length >= 10;
+
+      f.valid = ok;
+      f.el.classList.toggle('error', !ok);
+      f.err.classList.toggle('visible', !ok);
+      updateSubmit();
+    }
+
+    function updateSubmit() {
+      var allValid = Object.values(fields).every(function (f) { return f.valid; });
+      submitBtn.disabled = !allValid;
+    }
+
+    Object.keys(fields).forEach(function (key) {
+      var el = fields[key].el;
+      el.addEventListener('blur', function () { validateField(key); });
+      el.addEventListener('input', function () {
+        if (fields[key].el.classList.contains('error')) validateField(key);
+        updateSubmit();
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      Object.keys(fields).forEach(validateField);
+      var allValid = Object.values(fields).every(function (f) { return f.valid; });
+      if (!allValid) return;
+
+      // Client-side only — wire to Formspree or EmailJS to send for real.
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'در حال ارسال...';
+
+      setTimeout(function () {
+        form.reset();
+        Object.keys(fields).forEach(function (key) {
+          fields[key].valid = false;
+          fields[key].el.classList.remove('error');
+          fields[key].err.classList.remove('visible');
+        });
+        submitBtn.textContent = 'ارسال پیام';
+        successMsg.classList.add('visible');
+      }, 600);
+    });
+  })();
+</script>
+</body>
+</html>

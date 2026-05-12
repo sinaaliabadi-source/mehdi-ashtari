@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محتوا | مهدی اشتری</title>
+  <meta name="description" content="یادداشت‌ها و مطالب آموزشی درباره تحلیل کسب‌وکار و BABOK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="gradient-ring">
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link" aria-label="صفحه اصلی">
+        <img src="brand/logo.svg" alt="لوگو مهدی اشتری" class="logo-img" />
+      </a>
+      <nav class="desktop-nav" aria-label="ناوبری اصلی">
+        <a href="index.html">خانه</a>
+        <a href="ba-lab.html">BA Lab</a>
+        <a href="content.html">محتوا</a>
+        <a href="about.html">درباره من</a>
+        <a href="contact.html">تماس</a>
+      </nav>
+      <button class="hamburger-btn" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobile-menu">
+        <div class="hamburger-lines"><span></span><span></span><span></span></div>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav container" aria-label="ناوبری موبایل">
+        <a href="index.html">خانه</a>
+        <a href="ba-lab.html">BA Lab</a>
+        <a href="content.html">محتوا</a>
+        <a href="about.html">درباره من</a>
+        <a href="contact.html">تماس</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────── -->
+  <main>
+    <section>
+      <div class="container">
+
+        <div class="page-heading">
+          <h1>محتوا</h1>
+          <p>یادداشت‌ها، چک‌لیست‌ها و مطالب آموزشی درباره تحلیل کسب‌وکار، BABOK و مدیریت محصول.</p>
+        </div>
+
+        <!-- Posts grid — populated by blog.js -->
+        <div class="grid-3" id="posts-grid">
+          <!-- Spinner shown while loading -->
+          <div class="spinner-wrap" style="grid-column:1/-1">
+            <div class="spinner"></div>
+          </div>
+        </div>
+
+        <!-- Load more -->
+        <div class="load-more-wrap">
+          <button id="load-more-btn" class="btn-base btn-ghost" style="display:none">
+            بارگذاری بیشتر
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="brand/logo.svg" alt="لوگو" class="logo-img" />
+        <p>تحلیل تصمیم‌محور برای خروجی اجراپذیر</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hello@mehdiashtari.com" aria-label="ایمیل">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7.5c0-.83.67-1.5 1.5-1.5h13c.83 0 1.5.67 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 16.5v-9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m6 8 6 4 6-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com" aria-label="لینکدین" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.94 9.75V17m10-3.25c0-1.795-.78-3.25-2.75-3.25-1.284 0-2.033.592-2.406 1.25V9.75h-2.25V17h2.25v-3.25c0-.884.716-1.6 1.6-1.6.883 0 1.306.716 1.306 1.6V17h2.25v-3.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6.94" cy="6.94" r="1.19" fill="currentColor"/>
+          </svg>
+        </a>
+        <span class="footer-copy">© <span id="year"></span> Mehdi Ashtari</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
+<script src="js/blog.js" type="module"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
