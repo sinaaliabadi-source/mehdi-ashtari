@@ -85,27 +85,33 @@ function renderCard(post) {
 
   var title = post.title ? stripHtml(post.title.rendered || post.title) : post.title || '';
   var excerpt = post.excerpt ? stripHtml(post.excerpt.rendered || post.excerpt) : post.excerpt || '';
-  var date = post.date ? '<span class="content-date">' + toJalali(post.date) + '</span>' : '';
-  var tag = post.tag ? '<span class="content-tag">' + post.tag + '</span>' : '';
-  var linkOpen = post.link ? '<a href="' + post.link + '" target="_blank" rel="noopener noreferrer">' : '<div>';
+  var date = post.date ? '<span class="blog-card-date">' + toJalali(post.date) + '</span>' : '';
+  var tag = post.tag ? '<span class="blog-card-tag">' + post.tag + '</span>' : '';
+  var linkOpen = post.link ? '<a href="' + post.link + '" target="_blank" rel="noopener noreferrer" class="blog-card">' : '<div class="blog-card">';
   var linkClose = post.link ? '</a>' : '</div>';
 
   return linkOpen +
-    '<article class="card" style="height:100%">' +
-      '<div class="card-body">' +
-        imageHtml +
-        tag +
-        date +
-        '<h3 class="card-title">' + title + '</h3>' +
-        '<p class="card-desc">' + excerpt + '</p>' +
-        (post.link ? '<span class="card-link">بیشتر بخوانید <span aria-hidden>↗</span></span>' : '') +
-      '</div>' +
-    '</article>' +
+    imageHtml +
+    '<div class="blog-card-body">' +
+      tag +
+      date +
+      '<h3 class="blog-card-title">' + title + '</h3>' +
+      '<p class="blog-card-excerpt">' + excerpt + '</p>' +
+      (post.link ? '<span class="blog-card-more">بیشتر بخوانید <span aria-hidden>↗</span></span>' : '') +
+    '</div>' +
   linkClose;
 }
 
 function showStatic(grid) {
-  grid.innerHTML = STATIC_POSTS.map(renderCard).join('');
+  grid.innerHTML = STATIC_POSTS.map(function (post) {
+    return '<div class="blog-card">' +
+      '<div class="blog-card-body">' +
+        (post.tag ? '<span class="blog-card-tag">' + post.tag + '</span>' : '') +
+        '<h3 class="blog-card-title">' + post.title + '</h3>' +
+        '<p class="blog-card-excerpt">' + post.excerpt + '</p>' +
+      '</div>' +
+    '</div>';
+  }).join('');
 }
 
 function showError(grid, msg) {
